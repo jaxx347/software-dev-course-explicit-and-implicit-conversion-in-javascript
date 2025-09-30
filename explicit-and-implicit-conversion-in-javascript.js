@@ -19,14 +19,28 @@ Use console.log() to clearly show the before-and-after type conversions.
 */
 
 
-let result = "5" - 2;
+let result = Number("5") - 2;
 console.log("The result is: " + result);
+// Although this will spit out the correct number it is better to convert the string to a number in case of other operations.
 
-let isValid = Boolean("false");
+let isValid = Boolean(false);
 if (isValid) {
     console.log("This is valid!");
 }
+// I dont know what this is supposed to do, if the goal is to make it not work then you can't use explicit conversion to make a string false. so instead i removed the quotations.
 
 let age = "25";
-let totalAge = age + 5;
+let num = Number(age)
+let totalAge = num + 5;
 console.log("Total Age: " + totalAge);
+// this works because age is converted from a string to a number before they are added.
+
+let length = "6.5 inches";
+console.log(parseFloat(length));
+// explicit type conversion
+
+if ("valid"){
+  console.log("This is valid!")
+};
+
+// implicit type conversion
